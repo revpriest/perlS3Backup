@@ -79,3 +79,17 @@ every night, eventually your whole system should
 be backed up.
 
 Starting with the important ones.
+=================================
+
+Since it does things in the database first, you
+can pre-load the database with a bunch of files.
+pipe 'find /path/to/important/files' into appending
+to the database file, then do a regexp
+s/^/"/g
+and
+s/$/" 0/g
+
+On the new lines.
+
+I might make this better later, but this is
+enough for me for now.
